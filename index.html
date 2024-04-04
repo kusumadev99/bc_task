@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  #button{
+margin-left: 500px;
+margin-top: 250px;
+background-color: red;
+height:50px;
+width:100px;
+border-radius: 50px;
+  }
+</style>
+</head>
+<body>
+   
+   <button id="button">click me</button> 
+  <script>
+   document.getElementById('button').addEventListener('click', function() {
+    var mulcr = getclrs();
+    document.body.style.backgroundColor = mulcr;
+});
+
+function getclrs() {
+    var k = '0123456789ABCDEF';
+    var c = '#';
+    for (var i = 0; i < 6; i++) {
+        c += k[Math.floor(Math.random() * 16)];
+    }
+    return c;
+}
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+     
+
+</body>
+</html>
